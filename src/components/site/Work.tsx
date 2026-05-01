@@ -37,6 +37,7 @@ const projects: Project[] = [
     highlights: ["Smart contracts", "Testnet deployed", "Wallet auth", "On-chain transactions"],
     year: "2024",
     type: "Web3 / dApp",
+    image: dappPreview,
   },
 ];
 
