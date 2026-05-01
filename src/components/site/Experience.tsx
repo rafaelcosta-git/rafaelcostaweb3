@@ -13,7 +13,7 @@ type Item = {
 const items: Item[] = [
   {
     index: "01",
-    year: "2024",
+    year: "2026",
     title: "Future Innovators Hackathon",
     org: "Unicorn Factory Lisboa × START Lisboa",
     role: "Frontend & Pitch",
