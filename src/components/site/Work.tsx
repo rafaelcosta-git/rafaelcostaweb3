@@ -24,6 +24,7 @@ const projects: Project[] = [
     highlights: ["Auth & sessions", "Product catalog", "Order management", "Performance focused"],
     year: "2024",
     type: "Full Stack",
+    image: ecommercePreview,
   },
   {
     index: "02",
