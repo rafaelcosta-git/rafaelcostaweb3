@@ -14,7 +14,7 @@ export const About = () => {
           </div>
           <div className="md:col-span-7 md:col-start-6 space-y-6 text-lg md:text-xl leading-relaxed">
             <p>
-              Junior Full Stack Developer focused on the{" "}
+              Full Stack Developer focused on the{" "}
               <span className="italic font-display">JavaScript ecosystem</span> — React, Node.js and TypeScript. I enjoy building things that actually work in production: auth flows, REST APIs, database schemas and on-chain integrations.
             </p>
             <p className="text-foreground/75">
@@ -25,7 +25,7 @@ export const About = () => {
               <span className="font-medium text-foreground">Future Innovators Hackathon</span> (Unicorn Factory Lisboa &amp; START Lisbon), shipping an MVP in 24 hours, and previously volunteered at <span className="font-medium text-foreground">START Summit (Switzerland)</span>.
             </p>
             <p className="text-foreground/75">
-              Looking for <span className="font-medium text-foreground">junior full-stack roles</span> or <span className="font-medium text-foreground">freelance collaborations</span> where I can ship real product and keep growing fast.
+              Looking for <span className="font-medium text-foreground">full-stack roles</span> or <span className="font-medium text-foreground">freelance collaborations</span> where I can ship real product and keep growing fast.
             </p>
           </div>
         </div>

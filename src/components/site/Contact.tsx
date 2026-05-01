@@ -33,7 +33,7 @@ export const Contact = () => {
               <span className="ml-auto transition-transform duration-500 group-hover:translate-x-2 group-hover:text-ember">→</span>
             </a>
             <p className="md:col-span-4 md:col-start-9 text-paper/70 text-base">
-              Open to junior full-stack roles and freelance collaborations. I usually reply within 24 hours.
+              Open to full-stack roles and freelance collaborations. I usually reply within 24 hours.
             </p>
           </div>
 
@@ -52,7 +52,7 @@ export const Contact = () => {
 
       <footer className="container mt-32 pt-8 border-t border-paper/10 flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
         <p className="mono text-xs text-paper/50">© {new Date().getFullYear()} Rafael Costa — Crafted with care.</p>
-        <p className="mono text-xs text-paper/50">Junior Full Stack Web Developer · Portugal</p>
+        <p className="mono text-xs text-paper/50">Full Stack Web Developer · Portugal</p>
       </footer>
     </section>
   );

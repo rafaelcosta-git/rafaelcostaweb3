@@ -4,7 +4,7 @@ export const Hero = () => {
       <div className="container">
         <div className="flex items-center gap-3 mb-10 animate-fade-in">
           <span className="h-1.5 w-1.5 rounded-full bg-ember animate-pulse" />
-          <span className="eyebrow">Available for work · Junior Full Stack Dev</span>
+          <span className="eyebrow">Available for work · Full Stack Dev</span>
         </div>
 
         <h1
@@ -22,7 +22,7 @@ export const Hero = () => {
               <span className="italic font-light">on-chain Web3 integrations.</span>
             </p>
             <p className="mt-6 text-lg md:text-xl text-foreground/70 max-w-2xl leading-relaxed">
-              Junior Full Stack Developer shipping production-ready features end-to-end with React, Node.js, TypeScript and Solidity.
+              Full Stack Developer shipping production-ready features end-to-end with React, Node.js, TypeScript and Solidity.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
