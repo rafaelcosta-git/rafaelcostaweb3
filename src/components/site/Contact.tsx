@@ -33,7 +33,7 @@ export const Contact = () => {
               <span className="ml-auto transition-transform duration-500 group-hover:translate-x-2 group-hover:text-ember">→</span>
             </a>
             <p className="md:col-span-4 md:col-start-9 text-paper/70 text-base">
-              Open to junior full-stack roles, internships and freelance collaborations. I usually reply within 24 hours.
+              Open to junior full-stack roles and freelance collaborations. I usually reply within 24 hours.
             </p>
           </div>
 
