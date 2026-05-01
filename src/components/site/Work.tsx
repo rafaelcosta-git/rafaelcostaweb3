@@ -1,5 +1,6 @@
 import { useReveal } from "@/hooks/useReveal";
 import ecommercePreview from "@/assets/ecommerce-preview.png";
+import dappPreview from "@/assets/dapp-preview.png";
 
 type Project = {
   index: string;
@@ -36,6 +37,7 @@ const projects: Project[] = [
     highlights: ["Smart contracts", "Testnet deployed", "Wallet auth", "On-chain transactions"],
     year: "2024",
     type: "Web3 / dApp",
+    image: dappPreview,
   },
 ];
 
