@@ -2,16 +2,20 @@ import { useReveal } from "@/hooks/useReveal";
 
 const links = [
   { label: "Email", value: "mingosrafael24@gmail.com", href: "mailto:mingosrafael24@gmail.com" },
-  { label: "Phone", value: "+351 930 918 619", href: "tel:+351930918619" },
   { label: "GitHub", value: "rafaelcosta-git", href: "https://github.com/rafaelcosta-git" },
   { label: "LinkedIn", value: "rafael-costa", href: "https://linkedin.com/in/rafael-costa-950a80321" },
-  { label: "Portfolio", value: "rafael-costa-portfolio.vercel.app", href: "https://rafael-costa-portfolio.vercel.app" },
 ];
 
 export const Contact = () => {
   const ref = useReveal<HTMLDivElement>();
   return (
-    <section id="contact" className="py-24 md:py-40 bg-ink text-paper">
+    <section id="contact" className="relative py-24 md:py-40 bg-ink text-paper overflow-hidden">
+      {/* Ambient gradient inspired by the editorial reference */}
+      <div aria-hidden className="pointer-events-none absolute inset-0">
+        <div className="absolute -top-1/3 -left-1/4 w-[70vw] h-[70vw] rounded-full bg-gradient-to-br from-ember/30 via-ember-soft/10 to-transparent blur-3xl" />
+        <div className="absolute -bottom-1/3 -right-1/4 w-[60vw] h-[60vw] rounded-full bg-gradient-to-tr from-ember-soft/20 via-ember/5 to-transparent blur-3xl" />
+      </div>
+      <div className="relative container hidden" />
       <div className="container">
         <div ref={ref} className="reveal">
           <p className="eyebrow text-paper/60 mb-6">— Let's talk</p>
