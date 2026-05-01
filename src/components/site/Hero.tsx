@@ -1,6 +1,6 @@
 export const Hero = () => {
   return (
-    <section id="top" className="relative pt-36 pb-28 md:pt-48 md:pb-36 overflow-hidden">
+    <section id="top" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
       <div className="container">
         <div className="flex items-center gap-3 mb-10 animate-fade-in">
           <span className="h-1.5 w-1.5 rounded-full bg-ember animate-pulse" />

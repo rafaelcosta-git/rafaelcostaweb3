@@ -26,10 +26,11 @@ export const Skills = () => {
               key={g.label}
               className="bg-background p-6 md:p-8 hover:bg-paper-deep/60 transition-colors duration-500"
             >
-              <div className="flex items-baseline gap-3 mb-5">
+              <div className="flex items-baseline gap-3 mb-2">
                 <span className="mono text-xs text-muted-foreground">0{i + 1}</span>
                 <h3 className="display text-2xl md:text-3xl">{g.label}</h3>
               </div>
+              <p className="text-xs text-muted-foreground mb-5 ml-7">{g.context}</p>
               <ul className="flex flex-wrap gap-x-2 gap-y-2">
                 {g.items.map((it) => (
                   <li
