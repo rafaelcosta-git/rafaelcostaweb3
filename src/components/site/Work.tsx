@@ -91,11 +91,20 @@ const ProjectCard = ({ p }: { p: Project }) => {
 
       {/* Visual canvas */}
       <div className="mt-10 relative aspect-[21/9] overflow-hidden rounded-sm bg-paper-deep border border-border">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="display text-[20vw] md:text-[14vw] text-foreground/[0.06] select-none whitespace-nowrap">
-            {p.title}
-          </span>
-        </div>
+        {p.image ? (
+          <img
+            src={p.image}
+            alt={`${p.title} preview`}
+            loading="lazy"
+            className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[1200ms] group-hover:scale-[1.03]"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="display text-[20vw] md:text-[14vw] text-foreground/[0.06] select-none whitespace-nowrap">
+              {p.title}
+            </span>
+          </div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-ember/10" />
         <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
           <span className="mono text-xs text-foreground/60">{p.index} / {p.type}</span>
