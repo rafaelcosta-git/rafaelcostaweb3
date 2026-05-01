@@ -1,0 +1,56 @@
+import { useReveal } from "@/hooks/useReveal";
+
+const links = [
+  { label: "Email", value: "mingosrafael24@gmail.com", href: "mailto:mingosrafael24@gmail.com" },
+  { label: "Phone", value: "+351 930 918 619", href: "tel:+351930918619" },
+  { label: "GitHub", value: "rafaelcosta-git", href: "https://github.com/rafaelcosta-git" },
+  { label: "LinkedIn", value: "rafael-costa", href: "https://linkedin.com/in/rafael-costa-950a80321" },
+  { label: "Portfolio", value: "rafael-costa-portfolio.vercel.app", href: "https://rafael-costa-portfolio.vercel.app" },
+];
+
+export const Contact = () => {
+  const ref = useReveal<HTMLDivElement>();
+  return (
+    <section id="contact" className="py-24 md:py-40 bg-ink text-paper">
+      <div className="container">
+        <div ref={ref} className="reveal">
+          <p className="eyebrow text-paper/60 mb-6">— Let's talk</p>
+          <h2 className="display text-6xl md:text-9xl lg:text-[12rem]">
+            Have a <span className="italic font-light text-ember-soft">project</span>
+            <br />
+            in mind?
+          </h2>
+
+          <div className="mt-16 grid md:grid-cols-12 gap-8 items-end">
+            <a
+              href="mailto:mingosrafael24@gmail.com"
+              className="md:col-span-6 group inline-flex items-center gap-4 text-2xl md:text-3xl border-b border-paper/30 pb-4 hover:border-ember transition-colors duration-500"
+            >
+              <span>mingosrafael24@gmail.com</span>
+              <span className="ml-auto transition-transform duration-500 group-hover:translate-x-2 group-hover:text-ember">→</span>
+            </a>
+            <p className="md:col-span-4 md:col-start-9 text-paper/70 text-base">
+              Open to junior full-stack roles, internships and freelance collaborations. I usually reply within 24 hours.
+            </p>
+          </div>
+
+          <div className="mt-20 grid sm:grid-cols-2 md:grid-cols-5 gap-x-6 gap-y-8">
+            {links.map((l) => (
+              <a key={l.label} href={l.href} target={l.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="group">
+                <p className="eyebrow text-paper/50 mb-2">{l.label}</p>
+                <p className="mono text-sm text-paper group-hover:text-ember transition-colors break-all">
+                  {l.value} <span className="opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
+                </p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <footer className="container mt-32 pt-8 border-t border-paper/10 flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
+        <p className="mono text-xs text-paper/50">© {new Date().getFullYear()} Rafael Costa — Crafted with care.</p>
+        <p className="mono text-xs text-paper/50">Junior Full Stack Web Developer · Portugal</p>
+      </footer>
+    </section>
+  );
+};
