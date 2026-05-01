@@ -1,5 +1,6 @@
 import { useReveal } from "@/hooks/useReveal";
 import ecommercePreview from "@/assets/ecommerce-preview.png";
+import dappPreview from "@/assets/dapp-preview.png";
 
 type Project = {
   index: string;
