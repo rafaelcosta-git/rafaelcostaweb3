@@ -1,4 +1,5 @@
 import { useReveal } from "@/hooks/useReveal";
+import ecommercePreview from "@/assets/ecommerce-preview.png";
 
 type Project = {
   index: string;
@@ -9,6 +10,7 @@ type Project = {
   highlights: string[];
   year: string;
   type: string;
+  image?: string;
 };
 
 const projects: Project[] = [
