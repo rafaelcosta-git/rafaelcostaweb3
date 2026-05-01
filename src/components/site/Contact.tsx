@@ -15,7 +15,7 @@ export const Contact = () => {
         <div className="absolute -top-1/3 -left-1/4 w-[70vw] h-[70vw] rounded-full bg-gradient-to-br from-ember/30 via-ember-soft/10 to-transparent blur-3xl" />
         <div className="absolute -bottom-1/3 -right-1/4 w-[60vw] h-[60vw] rounded-full bg-gradient-to-tr from-ember-soft/20 via-ember/5 to-transparent blur-3xl" />
       </div>
-      <div className="relative container hidden" />
+      <div className="relative container">
       <div className="container">
         <div ref={ref} className="reveal">
           <p className="eyebrow text-paper/60 mb-6">— Let's talk</p>
