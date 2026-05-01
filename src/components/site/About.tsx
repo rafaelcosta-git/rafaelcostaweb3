@@ -14,7 +14,7 @@ export const About = () => {
           </div>
           <div className="md:col-span-7 md:col-start-6 space-y-6 text-lg md:text-xl leading-relaxed">
             <p>
-              Full Stack Developer focused on the{" "}
+              Full Stack Web Developer focused on the{" "}
               <span className="italic font-display">JavaScript ecosystem</span> — React, Node.js and TypeScript. I enjoy building things that actually work in production: auth flows, REST APIs, database schemas and on-chain integrations.
             </p>
             <p className="text-foreground/75">
