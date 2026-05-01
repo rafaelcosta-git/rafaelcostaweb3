@@ -52,9 +52,9 @@ const ProjectCard = ({ p }: { p: Project }) => {
   const ref = useReveal<HTMLDivElement>();
   return (
     <article ref={ref} className="reveal group border-t border-border py-14 md:py-20">
-      <div className="grid md:grid-cols-12 gap-8 md:gap-10">
+      <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-start">
         {/* Left meta */}
-        <div className="md:col-span-3">
+        <div className="md:col-span-2">
           <div className="flex items-center gap-3 mb-6">
             <span className="mono text-xs text-muted-foreground">{p.index}</span>
             <span className="h-px flex-1 bg-border" />
@@ -72,18 +72,18 @@ const ProjectCard = ({ p }: { p: Project }) => {
         </div>
 
         {/* Center content */}
-        <div className="md:col-span-9">
+        <div className="md:col-span-5">
           <h3
-            className="display text-4xl md:text-6xl lg:text-7xl mb-3 transition-transform duration-700 group-hover:translate-x-1"
+            className="display text-4xl md:text-5xl lg:text-6xl mb-3 transition-transform duration-700 group-hover:translate-x-1"
             style={{ transitionTimingFunction: "var(--transition-smooth)" }}
           >
             {p.title}
           </h3>
           <p className="font-display italic text-lg md:text-xl text-ember mb-8">{p.tagline}</p>
 
-          <ul className="space-y-3 mb-8 max-w-2xl">
+          <ul className="space-y-3 mb-8">
             {p.bullets.map((b) => (
-              <li key={b} className="flex gap-3 text-base md:text-lg leading-relaxed text-foreground/85">
+              <li key={b} className="flex gap-3 text-base leading-relaxed text-foreground/85">
                 <span className="text-ember mt-1.5 shrink-0">→</span>
                 <span>{b}</span>
               </li>
@@ -122,20 +122,20 @@ const ProjectCard = ({ p }: { p: Project }) => {
             )}
           </div>
         </div>
-      </div>
 
-      {/* Visual preview */}
-      {p.image && (
-        <div className="mt-12 relative aspect-[21/9] overflow-hidden rounded-sm bg-paper-deep border border-border">
-          <img
-            src={p.image}
-            alt={`${p.title} preview`}
-            loading="lazy"
-            className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[1200ms] group-hover:scale-[1.03]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-ember/10" />
-        </div>
-      )}
+        {/* Right visual preview */}
+        {p.image && (
+          <div className="md:col-span-5 relative aspect-[4/3] md:aspect-[5/4] overflow-hidden rounded-sm bg-paper-deep border border-border md:sticky md:top-24">
+            <img
+              src={p.image}
+              alt={`${p.title} preview`}
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[1200ms] group-hover:scale-[1.03]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-ember/10" />
+          </div>
+        )}
+      </div>
     </article>
   );
 };
