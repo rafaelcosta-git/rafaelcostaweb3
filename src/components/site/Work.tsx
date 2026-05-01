@@ -43,7 +43,7 @@ const projects: Project[] = [
       "Handled transaction states, gas feedback and error recovery on the UI.",
     ],
     stack: ["Solidity", "Web3.js", "Wagmi", "MetaMask", "React"],
-    year: "2024",
+    year: "2026",
     type: "Web3 / dApp",
     image: dappPreview,
     github: "https://github.com/rafaelcosta-git",
