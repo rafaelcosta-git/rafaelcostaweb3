@@ -1,11 +1,11 @@
 import { useReveal } from "@/hooks/useReveal";
 
 const groups = [
-  { label: "Frontend", items: ["React", "JavaScript", "TypeScript", "HTML", "CSS"] },
-  { label: "Backend", items: ["Node.js", "PHP", "REST APIs"] },
-  { label: "Database", items: ["MySQL"] },
-  { label: "Web3", items: ["Solidity", "Web3.js", "Wagmi", "MetaMask"] },
-  { label: "Tools", items: ["Git", "GitHub", "Vite", "Remix", "VS Code"] },
+  { label: "Frontend", context: "UI & state management", items: ["React", "JavaScript", "TypeScript", "HTML", "CSS"] },
+  { label: "Backend", context: "APIs & server logic", items: ["Node.js", "PHP", "REST APIs"] },
+  { label: "Database", context: "Schema design & queries", items: ["MySQL"] },
+  { label: "Web3", context: "Smart contracts & wallets", items: ["Solidity", "Web3.js", "Wagmi", "MetaMask"] },
+  { label: "Tools", context: "Workflow & versioning", items: ["Git", "GitHub", "Vite", "Remix", "VS Code"] },
 ];
 
 export const Skills = () => {
