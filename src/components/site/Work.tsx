@@ -6,121 +6,137 @@ type Project = {
   index: string;
   title: string;
   tagline: string;
-  description: string;
+  bullets: string[];
   stack: string[];
-  highlights: string[];
   year: string;
   type: string;
   image?: string;
+  github: string;
+  live?: string;
 };
 
 const projects: Project[] = [
   {
     index: "01",
     title: "E-commerce Platform",
-    tagline: "Full-stack shopping experience",
-    description:
-      "A complete e-commerce web application featuring a product catalog, secure user authentication, and end-to-end order management — engineered with performance and user experience in mind.",
+    tagline: "Full-stack shopping experience with auth & order management.",
+    bullets: [
+      "Built a full-stack e-commerce platform with authentication and order management.",
+      "Implemented REST APIs and JWT-based authentication.",
+      "Designed MySQL database structure for products, users and orders.",
+    ],
     stack: ["Node.js", "PHP", "MySQL", "JavaScript", "REST API"],
-    highlights: ["Auth & sessions", "Product catalog", "Order management", "Performance focused"],
     year: "2024",
     type: "Full Stack",
     image: ecommercePreview,
+    github: "https://github.com/rafaelcosta-git",
   },
   {
     index: "02",
     title: "On-chain Voting dApp",
-    tagline: "Decentralized governance",
-    description:
-      "A decentralized voting application powered by Solidity smart contracts deployed on testnet. Wallet-based authentication and transactions through MetaMask, with a reactive frontend wired to the chain.",
+    tagline: "Decentralized governance powered by smart contracts.",
+    bullets: [
+      "Developed a decentralized voting app using Solidity smart contracts.",
+      "Integrated MetaMask wallet authentication.",
+      "Built frontend connected to blockchain using Wagmi / Web3.js.",
+    ],
     stack: ["Solidity", "Web3.js", "Wagmi", "MetaMask", "React"],
-    highlights: ["Smart contracts", "Testnet deployed", "Wallet auth", "On-chain transactions"],
     year: "2024",
     type: "Web3 / dApp",
     image: dappPreview,
+    github: "https://github.com/rafaelcosta-git",
   },
 ];
 
 const ProjectCard = ({ p }: { p: Project }) => {
   const ref = useReveal<HTMLDivElement>();
   return (
-    <div ref={ref} className="reveal group border-t border-border py-12 md:py-16">
-      <div className="grid md:grid-cols-12 gap-8">
+    <article ref={ref} className="reveal group border-t border-border py-14 md:py-20">
+      <div className="grid md:grid-cols-12 gap-8 md:gap-10">
         {/* Left meta */}
         <div className="md:col-span-3">
           <div className="flex items-center gap-3 mb-6">
             <span className="mono text-xs text-muted-foreground">{p.index}</span>
             <span className="h-px flex-1 bg-border" />
           </div>
-          <div className="space-y-2">
-            <p className="eyebrow">Year</p>
-            <p className="mono text-sm">{p.year}</p>
-            <p className="eyebrow pt-3">Type</p>
-            <p className="mono text-sm">{p.type}</p>
+          <div className="grid grid-cols-2 md:grid-cols-1 gap-4">
+            <div>
+              <p className="eyebrow">Year</p>
+              <p className="mono text-sm mt-1">{p.year}</p>
+            </div>
+            <div>
+              <p className="eyebrow">Type</p>
+              <p className="mono text-sm mt-1">{p.type}</p>
+            </div>
           </div>
         </div>
 
         {/* Center content */}
-        <div className="md:col-span-6">
-          <h3 className="display text-5xl md:text-6xl lg:text-7xl mb-3 transition-transform duration-700 group-hover:translate-x-1" style={{ transitionTimingFunction: "var(--transition-smooth)" }}>
+        <div className="md:col-span-9">
+          <h3
+            className="display text-4xl md:text-6xl lg:text-7xl mb-3 transition-transform duration-700 group-hover:translate-x-1"
+            style={{ transitionTimingFunction: "var(--transition-smooth)" }}
+          >
             {p.title}
           </h3>
-          <p className="font-display italic text-xl text-ember mb-6">{p.tagline}</p>
-          <p className="text-foreground/80 text-base md:text-lg leading-relaxed max-w-xl">{p.description}</p>
+          <p className="font-display italic text-lg md:text-xl text-ember mb-8">{p.tagline}</p>
 
-          <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-2">
-            {p.highlights.map((h) => (
-              <li key={h} className="flex items-center gap-2 text-sm">
-                <span className="text-ember">→</span>
-                <span className="text-foreground/80">{h}</span>
+          <ul className="space-y-3 mb-8 max-w-2xl">
+            {p.bullets.map((b) => (
+              <li key={b} className="flex gap-3 text-base md:text-lg leading-relaxed text-foreground/85">
+                <span className="text-ember mt-1.5 shrink-0">→</span>
+                <span>{b}</span>
               </li>
             ))}
           </ul>
-        </div>
 
-        {/* Right stack */}
-        <div className="md:col-span-3 md:text-right">
-          <p className="eyebrow mb-4">Built with</p>
-          <ul className="flex flex-wrap md:justify-end gap-2">
+          <div className="flex flex-wrap gap-2 mb-8">
             {p.stack.map((s) => (
-              <li key={s} className="mono text-xs px-3 py-1 border border-border rounded-full hover:border-ink hover:bg-ink hover:text-paper transition-colors duration-300">
+              <span
+                key={s}
+                className="mono text-xs px-3 py-1 border border-border rounded-full hover:border-ink hover:bg-ink hover:text-paper transition-colors duration-300"
+              >
                 {s}
-              </li>
+              </span>
             ))}
-          </ul>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            <a
+              href={p.github}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 mono text-sm link-underline"
+            >
+              GitHub <span aria-hidden>↗</span>
+            </a>
+            {p.live && (
+              <a
+                href={p.live}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 mono text-sm text-ember link-underline"
+              >
+                Live demo <span aria-hidden>↗</span>
+              </a>
+            )}
+          </div>
         </div>
       </div>
 
-      {/* Visual canvas */}
-      <div className="mt-10 relative aspect-[21/9] overflow-hidden rounded-sm bg-paper-deep border border-border">
-        {p.image ? (
+      {/* Visual preview */}
+      {p.image && (
+        <div className="mt-12 relative aspect-[21/9] overflow-hidden rounded-sm bg-paper-deep border border-border">
           <img
             src={p.image}
             alt={`${p.title} preview`}
             loading="lazy"
             className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[1200ms] group-hover:scale-[1.03]"
           />
-        ) : (
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="display text-[20vw] md:text-[14vw] text-foreground/[0.06] select-none whitespace-nowrap">
-              {p.title}
-            </span>
-          </div>
-        )}
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-ember/10" />
-        <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
-          <span className="mono text-xs text-foreground/60">{p.index} / {p.type}</span>
-          <a
-            href={p.title.includes("Voting") ? "https://github.com/rafaelcosta-git" : "https://github.com/rafaelcosta-git"}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 mono text-xs link-underline"
-          >
-            View on GitHub <span aria-hidden>↗</span>
-          </a>
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-ember/10" />
         </div>
-      </div>
-    </div>
+      )}
+    </article>
   );
 };
 
@@ -135,9 +151,7 @@ export const Work = () => {
               Projects, <span className="italic font-light">in detail.</span>
             </h2>
           </div>
-          <p className="hidden md:block mono text-sm text-muted-foreground">
-            02 / 02
-          </p>
+          <p className="hidden md:block mono text-sm text-muted-foreground">02 / 02</p>
         </div>
 
         <div>

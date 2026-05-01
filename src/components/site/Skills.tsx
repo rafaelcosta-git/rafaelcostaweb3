@@ -20,20 +20,26 @@ export const Skills = () => {
           </h2>
         </div>
 
-        <div ref={ref} className="reveal divide-y divide-border border-y border-border">
+        <div ref={ref} className="reveal grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border rounded-sm overflow-hidden">
           {groups.map((g, i) => (
-            <div key={g.label} className="grid md:grid-cols-12 gap-6 py-8 group hover:bg-paper-deep/40 transition-colors duration-500 px-2 -mx-2">
-              <div className="md:col-span-3 flex items-center gap-4">
+            <div
+              key={g.label}
+              className="bg-background p-6 md:p-8 hover:bg-paper-deep/60 transition-colors duration-500"
+            >
+              <div className="flex items-baseline gap-3 mb-5">
                 <span className="mono text-xs text-muted-foreground">0{i + 1}</span>
-                <h3 className="display text-3xl md:text-4xl">{g.label}</h3>
+                <h3 className="display text-2xl md:text-3xl">{g.label}</h3>
               </div>
-              <div className="md:col-span-9 flex flex-wrap gap-x-8 gap-y-3 items-center">
+              <ul className="flex flex-wrap gap-x-2 gap-y-2">
                 {g.items.map((it) => (
-                  <span key={it} className="text-lg md:text-xl text-foreground/80 hover:text-ember transition-colors duration-300 link-underline">
+                  <li
+                    key={it}
+                    className="mono text-xs px-2.5 py-1 border border-border rounded-full text-foreground/80 hover:border-ember hover:text-ember transition-colors duration-300"
+                  >
                     {it}
-                  </span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           ))}
         </div>

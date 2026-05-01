@@ -14,15 +14,15 @@ export const About = () => {
           </div>
           <div className="md:col-span-7 md:col-start-6 space-y-6 text-lg md:text-xl leading-relaxed">
             <p>
-              I'm a Junior Full Stack Web Developer with a strong focus on the JavaScript ecosystem —{" "}
-              <span className="italic font-display">React, Node.js</span> and{" "}
-              <span className="italic font-display">TypeScript</span>. My hands-on work spans authentication, API integration and SQL database management.
+              Junior Full Stack Developer focused on the{" "}
+              <span className="italic font-display">JavaScript ecosystem</span> — React, Node.js and TypeScript. I ship complete features end-to-end: auth, APIs, databases and on-chain integrations.
             </p>
             <p className="text-foreground/75">
-              I've shipped a full-stack e-commerce platform and a decentralized voting dApp on testnet — and I'm currently focused on sharpening my craft and finding the right opportunity to grow as a developer.
+              I participated in the{" "}
+              <span className="font-medium text-foreground">Future Innovators Hackathon</span> (Unicorn Factory Lisboa &amp; START Lisbon), where I helped build an MVP in 24 hours and contributed to both frontend development and pitching in a fast-paced environment.
             </p>
             <p className="text-foreground/75">
-              Off-screen, I volunteered at <span className="font-medium text-foreground">START Summit (Switzerland)</span>, where I learned to thrive in international, high-pressure environments through teamwork and clear communication.
+              Previously volunteered at <span className="font-medium text-foreground">START Summit (Switzerland)</span> — international, high-pressure environments where teamwork and clear communication matter most.
             </p>
           </div>
         </div>
