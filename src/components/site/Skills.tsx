@@ -24,9 +24,7 @@ export const Skills = () => {
           {groups.map((g, i) => (
             <div
               key={g.label}
-              className={`bg-background p-6 md:p-8 hover:bg-paper-deep/60 transition-colors duration-500 ${
-                i === groups.length - 1 ? "sm:col-span-2 lg:col-span-1" : ""
-              }`}
+              className="bg-background p-6 md:p-8 hover:bg-paper-deep/60 transition-colors duration-500"
             >
               <div className="flex items-baseline gap-3 mb-2">
                 <span className="mono text-xs text-muted-foreground">0{i + 1}</span>
