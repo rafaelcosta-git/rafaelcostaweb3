@@ -18,10 +18,10 @@ export const Contact = () => {
       <div className="relative container">
         <div ref={ref} className="reveal">
           <p className="eyebrow text-paper/60 mb-6">— Let's talk</p>
-          <h2 className="display text-6xl md:text-9xl lg:text-[12rem]">
-            Have a <span className="italic font-light text-ember-soft">project</span>
+          <h2 className="display text-5xl md:text-8xl lg:text-[10rem] leading-[0.95]">
+            Let's <span className="italic font-light text-ember-soft">build</span>
             <br />
-            in mind?
+            something great together.
           </h2>
 
           <div className="mt-16 grid md:grid-cols-12 gap-8 items-end">
