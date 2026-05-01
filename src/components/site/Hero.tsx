@@ -39,6 +39,14 @@ export const Hero = () => {
               >
                 Get in touch
               </a>
+              <a
+                href="/cv.pdf"
+                download
+                className="group inline-flex items-center gap-2 border border-ink/80 px-6 py-3.5 rounded-full mono text-sm uppercase tracking-wider hover:bg-ink hover:text-paper transition-colors duration-500"
+              >
+                Download CV
+                <span aria-hidden className="transition-transform duration-500 group-hover:translate-y-0.5">↓</span>
+              </a>
             </div>
           </div>
 
