@@ -19,11 +19,12 @@ const projects: Project[] = [
   {
     index: "01",
     title: "E-commerce Platform",
-    tagline: "Full-stack shopping experience with auth & order management.",
+    tagline: "Production-ready shopping platform with secure checkout flow.",
     bullets: [
-      "Built a full-stack e-commerce platform with authentication and order management.",
-      "Implemented REST APIs and JWT-based authentication.",
-      "Designed MySQL database structure for products, users and orders.",
+      "Implemented JWT-based authentication and session management.",
+      "Designed a normalized MySQL schema for products, users and orders.",
+      "Built REST APIs for user, cart and transaction workflows.",
+      "Handled server-side validation and error handling across endpoints.",
     ],
     stack: ["Node.js", "PHP", "MySQL", "JavaScript", "REST API"],
     year: "2024",
@@ -34,11 +35,12 @@ const projects: Project[] = [
   {
     index: "02",
     title: "On-chain Voting dApp",
-    tagline: "Decentralized governance powered by smart contracts.",
+    tagline: "Trustless on-chain voting powered by Ethereum smart contracts.",
     bullets: [
-      "Developed a decentralized voting app using Solidity smart contracts.",
-      "Integrated MetaMask wallet authentication.",
-      "Built frontend connected to blockchain using Wagmi / Web3.js.",
+      "Wrote and deployed Solidity smart contracts for vote registration and tallying.",
+      "Integrated MetaMask wallet authentication with signed transactions.",
+      "Connected a React frontend to the blockchain using Wagmi and Web3.js.",
+      "Handled transaction states, gas feedback and error recovery on the UI.",
     ],
     stack: ["Solidity", "Web3.js", "Wagmi", "MetaMask", "React"],
     year: "2024",
@@ -51,7 +53,7 @@ const projects: Project[] = [
 const ProjectCard = ({ p }: { p: Project }) => {
   const ref = useReveal<HTMLDivElement>();
   return (
-    <article ref={ref} className="reveal group border-t border-border py-14 md:py-20">
+    <article ref={ref} className="reveal group border-t border-border py-12 md:py-16">
       <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-start">
         {/* Left meta */}
         <div className="md:col-span-2">
@@ -71,19 +73,19 @@ const ProjectCard = ({ p }: { p: Project }) => {
           </div>
         </div>
 
-        {/* Center content */}
-        <div className="md:col-span-5">
+        {/* Center content (dominant) */}
+        <div className="md:col-span-6">
           <h3
             className="display text-4xl md:text-5xl lg:text-6xl mb-3 transition-transform duration-700 group-hover:translate-x-1"
             style={{ transitionTimingFunction: "var(--transition-smooth)" }}
           >
             {p.title}
           </h3>
-          <p className="font-display italic text-lg md:text-xl text-ember mb-8">{p.tagline}</p>
+          <p className="font-display italic text-lg md:text-xl text-ember mb-6">{p.tagline}</p>
 
-          <ul className="space-y-3 mb-8">
+          <ul className="space-y-2.5 mb-7">
             {p.bullets.map((b) => (
-              <li key={b} className="flex gap-3 text-base leading-relaxed text-foreground/85">
+              <li key={b} className="flex gap-3 text-[15px] leading-relaxed text-foreground/85">
                 <span className="text-ember mt-1.5 shrink-0">→</span>
                 <span>{b}</span>
               </li>
@@ -123,9 +125,9 @@ const ProjectCard = ({ p }: { p: Project }) => {
           </div>
         </div>
 
-        {/* Right visual preview */}
+        {/* Right visual preview (smaller, supporting role) */}
         {p.image && (
-          <div className="md:col-span-5 relative aspect-[4/3] md:aspect-[5/4] overflow-hidden rounded-sm bg-paper-deep border border-border md:sticky md:top-24">
+          <div className="md:col-span-4 relative aspect-[4/3] overflow-hidden rounded-sm bg-paper-deep border border-border md:sticky md:top-24">
             <img
               src={p.image}
               alt={`${p.title} preview`}
