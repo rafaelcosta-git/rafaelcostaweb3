@@ -8,20 +8,21 @@ export const Hero = () => {
         </div>
 
         <h1
-          className="display text-[15vw] md:text-[10vw] lg:text-[9rem] xl:text-[10rem] animate-fade-in"
+          className="display text-[12vw] md:text-[7.5vw] lg:text-[7rem] xl:text-[7.5rem] text-foreground/85 animate-fade-in"
           style={{ animationDelay: "0.1s" }}
         >
-          Rafael
-          <br />
-          <span className="italic font-light">Costa.</span>
+          Rafael <span className="italic font-light">Costa.</span>
         </h1>
 
-        <div className="mt-14 grid md:grid-cols-12 gap-8 md:gap-12 items-start">
-          <div className="md:col-span-8 lg:col-span-7 animate-fade-in" style={{ animationDelay: "0.25s" }}>
-            <p className="display text-3xl md:text-4xl lg:text-5xl leading-[1.1] text-foreground">
-              Full Stack Developer focused on building{" "}
-              <span className="italic font-light">scalable, real-world applications</span> — from APIs to{" "}
-              <span className="italic font-light">Web3 solutions.</span>
+        <div className="mt-10 grid md:grid-cols-12 gap-8 md:gap-12 items-start">
+          <div className="md:col-span-9 animate-fade-in" style={{ animationDelay: "0.25s" }}>
+            <p className="display text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-foreground">
+              I build <span className="italic font-light">scalable web applications</span> — from{" "}
+              REST APIs and authentication systems to{" "}
+              <span className="italic font-light">on-chain Web3 integrations.</span>
+            </p>
+            <p className="mt-6 text-lg md:text-xl text-foreground/70 max-w-2xl leading-relaxed">
+              Junior Full Stack Developer shipping production-ready features end-to-end with React, Node.js, TypeScript and Solidity.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-4">

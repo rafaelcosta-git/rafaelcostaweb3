@@ -19,11 +19,12 @@ const projects: Project[] = [
   {
     index: "01",
     title: "E-commerce Platform",
-    tagline: "Full-stack shopping experience with auth & order management.",
+    tagline: "Production-ready shopping platform with secure checkout flow.",
     bullets: [
-      "Built a full-stack e-commerce platform with authentication and order management.",
-      "Implemented REST APIs and JWT-based authentication.",
-      "Designed MySQL database structure for products, users and orders.",
+      "Implemented JWT-based authentication and session management.",
+      "Designed a normalized MySQL schema for products, users and orders.",
+      "Built REST APIs for user, cart and transaction workflows.",
+      "Handled server-side validation and error handling across endpoints.",
     ],
     stack: ["Node.js", "PHP", "MySQL", "JavaScript", "REST API"],
     year: "2024",
@@ -34,11 +35,12 @@ const projects: Project[] = [
   {
     index: "02",
     title: "On-chain Voting dApp",
-    tagline: "Decentralized governance powered by smart contracts.",
+    tagline: "Trustless on-chain voting powered by Ethereum smart contracts.",
     bullets: [
-      "Developed a decentralized voting app using Solidity smart contracts.",
-      "Integrated MetaMask wallet authentication.",
-      "Built frontend connected to blockchain using Wagmi / Web3.js.",
+      "Wrote and deployed Solidity smart contracts for vote registration and tallying.",
+      "Integrated MetaMask wallet authentication with signed transactions.",
+      "Connected a React frontend to the blockchain using Wagmi and Web3.js.",
+      "Handled transaction states, gas feedback and error recovery on the UI.",
     ],
     stack: ["Solidity", "Web3.js", "Wagmi", "MetaMask", "React"],
     year: "2024",
